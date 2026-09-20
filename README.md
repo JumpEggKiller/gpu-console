@@ -18,16 +18,17 @@
 - **数据源**:`nvidia-smi`(优先目标机系统 PATH 版本,随包捆绑一份兜底)
 - 1 Hz 轮询,`nvidia-smi` 无黑窗闪烁(`CREATE_NO_WINDOW`)
 
-## 安装(Windows)
+## 下载与安装
 
-运行 `GPU Console Setup.exe`(Inno Setup 安装包,简体中文界面):
+**获取**:[Release v1.0.0 页面](https://github.com/JumpEggKiller/gpu-console/releases/latest) 点 **Download** 下载 `GPU Console Setup.exe`
+(固定链接:https://github.com/JumpEggKiller/gpu-console/releases/latest)。
 
-- 安装到 `C:\Program Files\GPU Console\`(需要管理员权限,也可选 per-user)
-- 创建开始菜单快捷方式(可选桌面图标)
-- 安装完成自动启动
+**安装**(运行该 exe,需管理员权限):
+- 装到 `C:\Program Files\GPU Console`,可选开始菜单/桌面图标
+- 装完自动启动;右键 / Esc / Q 退出
 
-**要求**: Windows 10/11 x64。显示 NVIDIA 数据需 NVIDIA 显卡驱动
-(随包捆绑的 `nvidia-smi.exe` 兜底,但数据以驱动为准)。
+**要求**:Windows 10/11 x64 + NVIDIA 显卡驱动
+(随包已捆绑 `nvidia-smi.exe` 作兜底,数据以驱动为准)。
 
 ## 构建
 
