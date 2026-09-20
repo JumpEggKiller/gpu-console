@@ -1,0 +1,14 @@
+build/
+__pycache__/
+*.pyc
+install*.log
+dist/
+installer/*.exe
+releases/
+icon.iconset/
+icon.png
+appicon.icns
+position.json
+*.log
+screen_check.png
+verify*.png

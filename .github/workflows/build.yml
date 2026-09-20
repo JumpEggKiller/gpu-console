@@ -1,0 +1,34 @@
+# GPU Console — Windows 安装包构建
+# 每次 push 在 windows-latest 上重建 Inno Setup 一键安装包;
+# 产物在 Actions → Artifacts → GPU-Console-Windows-x64 下载。
+name: build
+
+on:
+  push:
+    branches: [ "**" ]
+  workflow_dispatch:
+
+jobs:
+  windows:
+    name: Windows 安装包 (x64)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 安装 PyInstaller
+        run: python -m pip install --upgrade pip pyinstaller
+        shell: pwsh
+      - name: 构建 PyInstaller exe
+        run: python -m PyInstaller "GPU Console.spec" --noconfirm
+        shell: pwsh
+      - name: 编译 Inno Setup 安装包
+        run: |
+          choco install innosetup --no-progress -y
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" gpu_console.iss
+        shell: pwsh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GPU-Console-Windows-x64
+          path: installer/GPU Console Setup.exe
