@@ -20,7 +20,7 @@
 
 ## 下载与安装
 
-**获取**:[Release v1.0.0 页面](https://github.com/JumpEggKiller/gpu-console/releases/latest) 点 **Download** 下载 `GPU Console Setup.exe`
+**获取**:[Release 页面](https://github.com/JumpEggKiller/gpu-console/releases/latest) 点 **Download** 下载 `GPU Console Setup.exe`
 (固定链接:https://github.com/JumpEggKiller/gpu-console/releases/latest)。
 
 **安装**(运行该 exe,需管理员权限):

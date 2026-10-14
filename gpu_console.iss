@@ -2,7 +2,7 @@
 ; 编译: "C:\Users\micasa\AppData\Local\Programs\Inno Setup 6\ISCC.exe" gpu_console.iss
 
 #define MyAppName "GPU Console"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "1.1.0"
 #define MyAppPublisher "micasa"
 #define MyAppExeName "GPU Console.exe"
 #define MyAppURL "local"
