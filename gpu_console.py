@@ -125,7 +125,7 @@ def sample():
     try:
         out = _run_tool(
             _find_nvidia_smi(),
-            "--query-gpu=index,name,utilization.gpu,memory.used,memory.total,temperature.gpu,power.draw,fan.speed,clocks.max.graphics,pci.bus_id",
+            "--query-gpu=index,name,utilization.gpu,memory.used,memory.total,temperature.gpu,power.draw,fan.speed,clocks.current.graphics,pci.bus_id",
             "--format=csv,noheader,nounits",
         )
         gpus = []
